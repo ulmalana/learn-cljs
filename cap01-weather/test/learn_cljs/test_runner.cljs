@@ -1,8 +1,8 @@
 ;; This test runner is intended to be run from the command line
-(ns ch01.test-runner
+(ns learn-cljs.test-runner
   (:require
     ;; require all the namespaces that you want to test
-    [ch01.weather-test]
+    [learn-cljs.cap01-weather-test]
     [figwheel.main.testing :refer [run-tests-async]]))
 
 (defn -main [& args]

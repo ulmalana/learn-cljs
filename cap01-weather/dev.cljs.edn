@@ -2,4 +2,4 @@
   :css-dirs ["resources/public/css"]
   :auto-testing true
    }
-{:main ch01.weather}
+{:main learn-cljs.cap01-weather}

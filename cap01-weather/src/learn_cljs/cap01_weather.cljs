@@ -1,34 +1,26 @@
-(ns ^:figwheel-hooks ch01.weather
+(ns ^:figwheel-hooks learn-cljs.cap01-weather
   (:require
    [goog.dom :as gdom]
    [reagent.core :as reagent :refer [atom]]
    [reagent.dom :as rdom]))
 
-(println "This text is printed from src/ch01/weather.cljs. Go ahead and edit it and see reloading in action.")
+(println "This text is printed from src/learn_cljs/cap01_weather.cljs. Go ahead and edit it and see reloading in action.")
 
 (defn multiply [a b] (* a b))
 
 ;; define your app data so that it doesn't get over-written on reload
-(defonce app-state (atom {:text "This is live reloading!"}))
+(defonce app-state (atom {:text "Hello world!"}))
 
 (defn get-app-element []
   (gdom/getElement "app"))
 
 (defn hello-world []
   [:div
-   [:h1 "I say: " (:text @app-state)]])
-
-(defn append-element [parent child]
-  (when-not (.contains parent child)
-    (.appendChild parent child)))
-
-(defn greeter
-  []
-  [:div
-   [:h1 "Halo Riz"]])
+   [:h1 (:text @app-state)]
+   [:h3 "Edit this in src/learn_cljs/cap01_weather.cljs and watch it change!"]])
 
 (defn mount [el]
-  (rdom/render [greeter] el))
+  (rdom/render [hello-world] el))
 
 (defn mount-app-element []
   (when-let [el (get-app-element)]
