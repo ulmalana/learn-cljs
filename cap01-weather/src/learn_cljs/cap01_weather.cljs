@@ -8,19 +8,27 @@
 
 (defn multiply [a b] (* a b))
 
+(defn append-element [parent child]
+  (when-not (.contains parent child)
+    (.appendChild parent child)))
+
 ;; define your app data so that it doesn't get over-written on reload
-(defonce app-state (atom {:text "Hello world!"}))
+(defonce app-state (atom {:text "Live reloading rocks!"}))
 
 (defn get-app-element []
   (gdom/getElement "app"))
 
 (defn hello-world []
   [:div
-   [:h1 (:text @app-state)]
+   [:p "I say: " (:text @app-state)]
    [:h3 "Edit this in src/learn_cljs/cap01_weather.cljs and watch it change!"]])
 
+(defn greeter []
+  [:div
+   [:h1 "Hello, Riz"]])
+
 (defn mount [el]
-  (rdom/render [hello-world] el))
+  (rdom/render [greeter] el))
 
 (defn mount-app-element []
   (when-let [el (get-app-element)]
