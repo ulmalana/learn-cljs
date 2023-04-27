@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="https://clojurescript.org/images/cljs-logo-icon-32.png">
+  </head>
+  <body>
+    <div id="workspace">
+        <section class="query-container">
+            <h3 class="section-heading">Query</h3>
+            <textarea id="query-input" class="input"></textarea>
+        </section>
+
+        <section class="result-container">
+            <h3 class="section-heading">Results</h3>
+            <div id="query-results" class="output"></div>
+        </section>
+        
+    </div> <!-- end of app div -->
+    
+    <!-- KEEP THIS SCRIPT TAG : IT LOADS YOUR APPLICATION CODE -->
+    <script src="cljs-out/dev-main.js" type="text/javascript"></script>
+  </body>
+</html>
