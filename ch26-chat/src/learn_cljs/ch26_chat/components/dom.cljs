@@ -7,7 +7,7 @@
     (apply gdom/createDom tag-name args)))
 
 (def div (dom-fn TagName.DIV))
-(def a (dom-fn TagName..A))
+(def a (dom-fn TagName.A))
 (def article (dom-fn TagName.ARTICLE))
 (def aside (dom-fn TagName.ASIDE))
 (def button (dom-fn TagName.BUTTON))
